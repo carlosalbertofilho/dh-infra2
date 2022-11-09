@@ -24,6 +24,16 @@
 	},
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"terraform.languageServer": {
+					"enabled": true,
+					"args": ["serve"]
+				},
+				"azureTerraform.terminal": "integrated",
+				"terraform.languageServer.terraform.path": "/usr/bin/terraform-ls",
+				"terraform.languageServer.path": "/usr/bin/terraform-ls",
+				"terraform.languageServer.tcp.port": 0
+			},
 			"extensions": [
 				"redhat.ansible",
 				"redhat.vscode-yaml",
