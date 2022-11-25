@@ -18,7 +18,7 @@ resource "aws_security_group" "sg_acesso_ssh_publico" {
   }
 
   tags = {
-    "Name" = "${variable.usuario}-sg_acesso_ssh_publico"
+    "Name" = "${var.usuario}-sg_acesso_ssh_publico"
   }
 }
 
@@ -30,9 +30,9 @@ resource "aws_security_group" "sg_acesso_web" {
     cidr_blocks = [var.ip_internet]
   }
   ingress {
-    from_port = 81
-    to_port = 86
-    protocol = "tcp"
+    from_port   = 81
+    to_port     = 86
+    protocol    = "tcp"
     cidr_blocks = [var.ip_internet]
   }
   tags = {
